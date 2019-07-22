@@ -1,13 +1,12 @@
 <template>
     <div>
-       Home
-      <router-link to="/list">列表</router-link>
+      I am List
     </div>
 </template>
 
 <script>
     export default {
-        name: "Home"
+        name: "List.vue"
     }
 </script>
 
