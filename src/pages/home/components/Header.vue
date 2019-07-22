@@ -12,6 +12,7 @@
     }
 </script>
 
-<style scoped>
-
+<style lang="stylus" scoped>
+  .header
+    height: .86rem
 </style>
