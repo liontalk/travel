@@ -1,8 +1,20 @@
 <template>
   <div class="header">
-    <div class="header-left">返回</div>
-    <div class="header-input">输入景点/城市搜索</div>
-    <div class="header-right">城市</div>
+    <div class="header-left">
+      <div class="iconfont back-icon">&#xe624;</div>
+    </div>
+    <div class="header-input">
+      <span class="iconfont">
+        &#xe632;
+      </span>
+      输入景点/城市搜索
+    </div>
+    <div class="header-right">
+      城市
+      <span class="iconfont arrow-icon">
+        &#xe64a;
+      </span>
+    </div>
   </div>
 </template>
 
@@ -15,29 +27,40 @@
 <style lang="stylus" scoped>
   /**
     * 1 rem =html font-size=50px
-
     */
+  @import "~@/assets/css/iconfont/varibles.styl"
+
   .header
     line-height: .86rem
     display: flex
-    background: #00bcd4
+    background: $bgColor
     color: #fff
 
     .header-left
       width: .64rem
       float: left
 
+      .back-icon
+        text-align center
+        font-size .4rem
+
     .header-input
       flex: 1
-      height : 0.64rem
+      height: 0.64rem
       line-height: 0.64rem
+      padding-left 0.2rem
       margin-top: 0.12rem
       margin-left: 0.2rem
       background: #fff
       border-radius: .1rem
       color: #ccc
+
     .header-right
       width: 1.24rem
       float: right
       text-align: center
+
+      .arrow-icon
+        margin-left: -0.04rem
+        font-size: 0.24rem
 </style>
