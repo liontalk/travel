@@ -14,5 +14,5 @@
 
 <style lang="stylus" scoped>
   .header
-    height: .86rem
+     height: .86rem
 </style>
