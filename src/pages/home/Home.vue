@@ -11,11 +11,12 @@
         name: "Home",
         components:{
           Header : Header
-
         }
     }
 </script>
 
 <style scoped>
-
+    /**
+       1 rem =html font-size=50px
+     */
 </style>
