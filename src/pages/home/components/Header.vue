@@ -9,19 +9,25 @@
       </span>
       输入景点/城市搜索
     </div>
-    <div class="header-right">
-      城市
-      <span class="iconfont arrow-icon">
+    <router-link to="/city">
+      <div class="header-right">
+        北京
+        <span class="iconfont arrow-icon">
         &#xe64a;
       </span>
-    </div>
+      </div>
+    </router-link>
+
   </div>
 </template>
 
 <script>
-    export default {
-        name: "Header"
+  export default {
+    name: "Header",
+    props: {
+      city: String
     }
+  }
 </script>
 
 <style lang="stylus" scoped>
@@ -59,6 +65,7 @@
       width: 1.24rem
       float: right
       text-align: center
+      color: #fff
 
       .arrow-icon
         margin-left: -0.04rem
