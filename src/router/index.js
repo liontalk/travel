@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/pages/home/Home'
-import List from '@/pages/list/List'
+import City from '@/pages/home/city/City'
 
 import '@/assets/css/reset.css'
 
@@ -16,9 +16,9 @@ export default new Router({
       component: Home
     },
     {
-      path: '/list',
-      name: 'list',
-      component: List
+      path: '/city',
+      name: 'City',
+      component: City
     },
   ]
 })
