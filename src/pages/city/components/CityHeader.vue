@@ -14,7 +14,7 @@
 </script>
 
 <style lang="stylus" scoped>
- /* @import "~@/assets/css/iconfont/varibles.styl"
+  @import "~@/assets/css/iconfont/varibles.styl"
   .header
     position: relative
     overflow: hidden
@@ -31,5 +31,5 @@
       width: .64rem
       text-align: center
       font-size: .4rem
-      color: #fff*/
+      color: #fff
 </style>
