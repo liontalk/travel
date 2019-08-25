@@ -50,7 +50,7 @@
     name: "CityList",
     props: {
       cities: Object,
-      hotCities: []
+      hotCities: Array
     },
     mounted() {
       this.scroll = new Bscroll(this.$refs.wrapper)

@@ -1,22 +1,7 @@
 <template>
   <ul class="list">
-    <li class="item">
-      A
-    </li>
-    <li class="item">
-      A
-    </li>
-    <li class="item">
-      A
-    </li>
-    <li class="item">
-      A
-    </li>
-    <li class="item">
-      A
-    </li>
-    <li class="item">
-      A
+    <li class="item" v-for="item of letters" :key="item">
+      {{item}}
     </li>
   </ul>
 </template>
@@ -29,6 +14,9 @@
     },
     computed: {
       letters() {
+        if(this.cities==null){
+            console.log("21");
+        }
         const letters = []
         for (let i in this.cities) {
           letters.push(i)
