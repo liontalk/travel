@@ -44,18 +44,28 @@
 
 
 <script>
-  import Bscroll from 'better-scroll'
+    import Bscroll from 'better-scroll'
 
-  export default {
-    name: "CityList",
-    props: {
-      cities: Object,
-      hotCities: Array
-    },
-    mounted() {
-      this.scroll = new Bscroll(this.$refs.wrapper)
+    export default {
+        name: "CityList",
+        props: {
+            cities: Object,
+            hotCities: Array,
+            letter: String
+        },
+        mounted() {
+            this.scroll = new Bscroll(this.$refs.wrapper)
+        },
+        watch :  {
+            letter(){
+                console.log(this.letter);
+                if(this.letter){
+                    const element =this.$refs[this.letter][0];
+                    this.scroll.scrollToElement(element);
+                }
+            }
+        }
     }
-  }
 
 </script>
 <style scoped lang="stylus">
