@@ -31,7 +31,7 @@
     },
     methods: {
       getCityInfo() {
-        axios.get('http://192.168.1.12:8888/api/city/data').then(this.handleGetCityInfoSuccess);
+        axios.get('http://localhost:8888/api/city/data').then(this.handleGetCityInfoSuccess);
       },
       handleGetCityInfoSuccess(res) {
         res = res.data;
