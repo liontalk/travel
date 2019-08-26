@@ -3,6 +3,9 @@
     <li class="item" v-for="item of letters"
         :key="item"
         @click="handlerClick"
+        @touchmove="handleTouchMove"
+        @touchend="handleTouchEnd"
+        @touchstart="handleTouchStart"
     >
       {{item}}
     </li>
@@ -18,7 +21,16 @@
         methods: {
             handlerClick(e) {
                 this.$emit('changeLetter', e.target.innerText);
-            }
+            },
+            handleTouchStart() {
+
+            },
+            handleTouchMove() {
+
+            },
+            handleTouchEnd() {
+
+            },
         },
         computed: {
             letters() {
