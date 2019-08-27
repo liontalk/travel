@@ -11,7 +11,8 @@
     </div>
     <router-link to="/city">
       <div class="header-right">
-        北京
+        <!--this.$store 就是  store/index.js 中的 Vuex.Store -->
+        {{this.$store.state.city}}
         <span class="iconfont arrow-icon">
         &#xe64a;
       </span>
@@ -24,9 +25,9 @@
 <script>
   export default {
     name: "Header",
-    props: {
+    /*props: {
       city: String
-    }
+    }*/
   }
 </script>
 

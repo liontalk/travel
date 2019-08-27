@@ -5,7 +5,7 @@
         <div class="title border-topbottom">当前城市</div>
         <div class="button-list">
           <div class="button-wrapper">
-            <div class="button">北京</div>
+            <div class="button">{{this.$store.state.city}}</div>
           </div>
         </div>
       </div>
@@ -16,6 +16,7 @@
             class="button-wrapper"
             v-for="item of hotCities"
             :key="item.id"
+            @click="hotCityHandler(item.name)"
           >
             <div class="button">{{item.name}}</div>
           </div>
@@ -34,6 +35,7 @@
             class="item border-bottom"
             v-for="innerItem of item"
             :key="innerItem.id"
+            @click="hotCityHandler(innerItem.name)"
           >
             {{innerItem.name}}
           </div>
@@ -66,8 +68,11 @@
             }
         },
         methods: {
-
-
+            hotCityHandler(value) {
+               // this.$store.dispatch('changCity',value)
+                this.$store.commit('changCitys',value)
+                this.$router.push('/');
+            }
         }
     }
 
