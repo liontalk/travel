@@ -8,6 +8,7 @@
         @touchend="handleTouchEnd"
         @touchstart="handleTouchStart"
     >
+
       {{item}}
     </li>
   </ul>
