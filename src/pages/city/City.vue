@@ -31,6 +31,7 @@
             }
         },
         methods: {
+            //返回json数据在static/mock/city.json文件中
             getCityInfo() {
                 axios.get('http://localhost:8888/api/city/data').then(this.handleGetCityInfoSuccess);
             },
@@ -52,6 +53,11 @@
         },
         mounted() {
             this.getCityInfo();
+        },
+        activated() {
+
+            //页面重新被显示的时候加载
+            console.log("activated");
         }
     }
 
