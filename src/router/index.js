@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/pages/home/Home'
 import City from '@/pages/city/City'
-
+import Detail from '@/pages/detail/Detail'
 import '@/assets/css/reset.css'
 
 
@@ -19,6 +19,11 @@ export default new Router({
       path: '/city',
       name: 'City',
       component: City
+    },{
+    //动态路由 带一个参数 参数值放到id中
+      path: '/detail/:id',
+      name: 'Detail',
+      component: Detail
     },
   ]
 })
