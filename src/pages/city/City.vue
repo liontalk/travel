@@ -28,6 +28,8 @@
                 cities: {},
                 hotCities: [],
                 letter: ''
+
+
             }
         },
         methods: {
