@@ -8,7 +8,7 @@
   import  DetailBanner from "../detail/components/Banner"
     export default {
         name: "Detail",
-        comments : {
+        components : {
             DetailBanner
         }
     }

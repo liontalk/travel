@@ -1,17 +1,18 @@
 <template>
 
   <div>
-    <div class="search" >
+    <div class="search">
       <input v-model="keyword" type="text" class="search-input" placeholder="输入城市名称或拼音">
 
     </div>
     <div class="search-content" ref="search" v-show="keyword">
       <ul>
-        <li v-for="(item,index) of list" :key="index" class="search-item border-bottom" @click="hotCityHandler(item.name)">
+        <li v-for="(item,index) of list" :key="index" class="search-item border-bottom"
+            @click="hotCityHandler(item.name)">
           {{item.name}}
         </li>
         <li class="search-item border-bottom" v-show="hasNoData">
-            没有找到匹配数据
+          没有找到匹配数据
         </li>
       </ul>
     </div>
@@ -21,7 +22,8 @@
 </template>
 
 <script>
-  import BScroll  from 'better-scroll'
+    import BScroll from 'better-scroll'
+
     export default {
         name: "CitySearch",
         props: {
@@ -39,7 +41,7 @@
                 if (this.timer) {
                     clearTimeout()
                 }
-                if(!this.keyword){
+                if (!this.keyword) {
                     this.list = []
                     return
                 }
@@ -59,15 +61,15 @@
         mounted() {
             this.scroll = new BScroll(this.$refs.search);
         },
-        computed:{
-           hasNoData(){
-              return !this.list.length
-           }
+        computed: {
+            hasNoData() {
+                return !this.list.length
+            }
         },
         methods: {
             hotCityHandler(value) {
                 // this.$store.dispatch('changCity',value)
-                this.$store.commit('changCitys',value)
+                this.$store.commit('changCitys', value)
                 this.$router.push('/');
             }
         }
